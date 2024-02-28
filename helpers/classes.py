@@ -16,6 +16,10 @@ class Dice:
         
     def ausgabe(self):
         print(f'Es wurde eine {self.wert} geworfen!')
+    def setValid(self, valid):
+        self.valid = valid
+    def setTriple(self,triple):
+        self.triple = triple
         
 class Players:
     players = []

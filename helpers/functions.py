@@ -1,20 +1,23 @@
 
-def scores(value:int, triple:bool) -> int:
+def scores(value:int, amount:int) -> int:
+    """value ist hier die gewürfelte Zahl und amount die Häufigkeit im aktuellen Wurf"""
     if value > 6:
         return 0
     else:
-        if triple == 0:
+        if amount < 3:
             if value == 5:
                 result = value * 10
             elif value == 1:
                 result = value * 100
             else:
                 result = 0
-        else:
+        elif amount >= 3:
             if value == 1:
                 result = value * 1000
             else:
                 result = value * 100
+        else:
+            result = 0
     
     return result
 
